@@ -1,0 +1,6 @@
+run test
+- go test github.com/Aritiaya50217/GolangByCodeBangkok
+
+
+run integration
+- go test github.com/Aritiaya50217/GolangByCodeBangkok/handlers -v -tags=integration

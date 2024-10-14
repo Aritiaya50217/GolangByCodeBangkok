@@ -8,6 +8,7 @@ import (
 	assert "github.com/stretchr/testify/assert"
 )
 
+// Unit Testing: ใช้สำหรับตรวจสอบความถูกต้องของฟังก์ชันUnit Testing ใช้ ตรวจสอบว่าฟังก์ชันหรือโมดูลทำงานตามที่คาดหวัง
 func TestCheckGrade(t *testing.T) {
 	type testCase struct {
 		name     string
@@ -29,12 +30,14 @@ func TestCheckGrade(t *testing.T) {
 	}
 }
 
+// Benchmarking: ใช้สำหรับวัดประสิทธิภาพของฟังก์ชัน
 func BenchmarkCheckGrade(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		services.CheckGrade(80)
 	}
 }
 
+// Example Test: ใช้เพื่อให้ตัวอย่างการใช้งานฟังก์ชันและแสดงผลลัพธ์ที่คาดหวัง
 func ExampleCheckGrade() {
 	grade := services.CheckGrade(80)
 	fmt.Println(grade)
